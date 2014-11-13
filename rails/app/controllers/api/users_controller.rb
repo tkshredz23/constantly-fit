@@ -4,13 +4,13 @@ class Api::UsersController < ApplicationController
   def show
     user = UserDecorator.decorate(User.find(params[:id]), user_params)
 
-    respond_with user
+    respond_with({ user: user })
   end
 
   def index
     users =  UserDecorator.decorate_collection(User.all)
 
-    respond_with users
+    respond_with({ users: users })
   end
 
   private

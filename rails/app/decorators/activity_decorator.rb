@@ -28,8 +28,9 @@ class ActivityDecorator < Draper::Decorator
   def activities_by_type
     @activities.group_by(&:kind).map do |group, acts|
       {
+        id: SecureRandom.uuid,
         type: group,
-        items: activity_list(acts)
+        activity: activity_list(acts)
       }
     end
   end
@@ -43,25 +44,33 @@ class ActivityDecorator < Draper::Decorator
   def activities_by_provider
     @activities.group_by{|x| x.account.type }.map do |type, acts|
       {
+        id: SecureRandom.uuid,
         provider: type.deconstantize.downcase,
-        items: activity_list(acts)
+        activity: activity_list(acts)
       }
     end
   end
 
   def activity_list(acts)
+    return parse_activity(acts.first) if acts.count == 1
+
     acts.map do |act|
-      hash = {}
-
-      hash[:user] = user_decorator(act.user_id) if @show_user
-      hash[:duration] = time_str(act.duration)
-      hash[:distance] = act.distance
-      hash[:points] = act.points
-      hash[:calories] = act.calories
-      hash[:steps] = act.steps
-      hash[:count] = act.count
-
-      hash
+      parse_activity(act)
     end
+  end
+
+  def parse_activity(act)
+    hash = {}
+
+    hash[:id] = SecureRandom.uuid
+    hash[:user] = user_decorator(act.user_id) if @show_user
+    hash[:duration] = time_str(act.duration)
+    hash[:distance] = act.distance
+    hash[:points] = act.points
+    hash[:calories] = act.calories
+    hash[:steps] = act.steps
+    hash[:count] = act.count
+
+    hash
   end
 end

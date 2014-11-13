@@ -88,7 +88,7 @@ class Activity < ActiveRecord::Base
                                                : query.order(sort)
     end
 
-    query
+    query.all
   end
 
   def self.filter_by(opts)

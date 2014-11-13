@@ -6,13 +6,15 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-           this.route('about');
-           this.route('users', { path: "/leaderboard" });
-           this.resource('user', { path: '/users/:id' });
+   this.route('about');
+   this.route('users', { path: "/leaderboard" });
+   this.resource('user', { path: '/users/:id' });
+   this.route('workouts');
+   this.route('login');
 });
 
 Router.reopen({
-                  //location: 'auto'
-                  });
+  //location: 'auto'
+});
 
 export default Router;

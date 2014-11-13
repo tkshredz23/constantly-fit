@@ -5,14 +5,14 @@ class Api::ActivitiesController < ApplicationController
     opts = activity_params.merge(method: 'type')
 
     activities = ActivityDecorator.new(Activity.all, opts)
-    respond_with activities
+    respond_with({ workouts: activities })
   end
 
   def points
     opts = activity_params.merge(method: 'provider')
 
     activities = ActivityDecorator.new(Activity.all, opts)
-    respond_with activities
+    respond_with({ points: activities })
   end
 
   private

@@ -41,7 +41,7 @@ class UserDecorator < Draper::Decorator
 
   def as_json(*)
     hash = {
-      id: id,
+      id: SecureRandom.uuid,
       email: email,
       avatar: avatar_url,
       first_name: first_name,

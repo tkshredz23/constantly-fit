@@ -19,6 +19,20 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' http://localhost:35729 www.google-analytics.com ajax.googleapis.com",
+    'font-src': "'self' http://fonts.googleapis.com",
+    'connect-src': "'self' http://localhost:3000",
+    'img-src': "'self' http://gravatar.com",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+    'media-src': "'self'"
+  }
+
+  ENV['simple-auth-devise'] = {
+      resourceName: 'account'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;

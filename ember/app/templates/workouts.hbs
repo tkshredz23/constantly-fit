@@ -1,0 +1,54 @@
+<div class="top-padding">
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h1>Workout Leaderboard</h1>
+
+        {{#link-to 'workouts' (query-params type="running")}}running{{/link-to}}
+        {{#link-to 'workouts' (query-params type="other")}}other{{/link-to}}
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <th class='center'>
+                User
+              </th>
+              <th class='center'>
+                {{#link-to 'workouts' (query-params order="duration,{{toggle}}")}}
+                Duration
+                {{/link-to}}
+              </th>
+              <th class='center'>
+                {{#link-to 'workouts' (query-params order="distance")}}
+                Distance
+                {{/link-to}}
+              </th>
+              <th class='center'>
+                Runs
+              </th>
+            </thead>
+            <tbody>
+            {{#each}}
+            <tr>
+              <td>
+                <img {{bind-attr src=activity.user.avatar alt=activity.user.first_name}} height='50' width='50' />
+                {{activity.user.first_name}} {{activity.user.last_name}}
+              </td>
+              <td>
+                {{activity.duration}}
+              </td>
+              <td>
+                {{activity.distance}}
+              </td>
+              <td>
+                {{activity.count}}
+              </td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
