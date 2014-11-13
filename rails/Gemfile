@@ -1,0 +1,55 @@
+source 'https://rubygems.org'
+
+gem 'rails'
+gem 'pg'
+gem 'sass-rails', '~> 4.0.3'
+gem 'haml-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'compass'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem "font-awesome-rails"
+
+# gem 'spring',        group: :development
+gem 'require_all'
+gem 'hashie'
+gem 'friendly_id'
+gem 'draper'
+gem 'bcrypt'
+gem 'simple_form'
+
+gem 'devise'
+gem 'alchemist'
+gem 'oauth2'
+gem 'omniauth'
+gem 'omniauth-runkeeper'
+gem 'omniauth-fitbit'
+gem 'omniauth-jawbone'
+gem 'omniauth-strava'
+
+gem 'fitgem'
+gem 'health_graph'
+gem 'strava-api-v3'
+gem 'jawbone', github: 'tkshreddz23/jawbone-up-api'
+# gem 'nike_v2', :git => 'git@tk.github.com:tkshreddz23/nike_v2.git'
+
+gem 'nike_v2', github: 'tkshreddz23/nike_v2', branch: 'v1'
+# gem 'nike_v2'
+
+gem 'faraday_middleware'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'foreman'
+  gem 'dotenv-rails'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end

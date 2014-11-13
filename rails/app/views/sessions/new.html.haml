@@ -1,0 +1,5 @@
+%h1 Login with +
+= simple_form_for @user, url: polymorphic_path([:auth, @user.type.deconstantize.downcase]), method: :post do |f|
+  = f.input :uid, placeholder: 'Email Address'
+  = f.input :password, placeholder: 'Password'
+  = f.button :submit, 'Login'

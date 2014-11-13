@@ -1,0 +1,6 @@
+FB_CLIENT_ID = 'ce8b741567c84a9c94a4b300246dcf5c'
+FB_CLIENT_SECRET = 'b9afb2e595dd43789350fe0c4a9716c3'
+FB_SITE = 'https://api.fitbit.com'
+FB_AUTHORIZATION_URL = '/oauth/authorize'
+FB_ACCESS_TOKEN_URL = '/oauth/access_token'
+FB_REQUEST_TOKEN_URL = '/oauth/request_token'

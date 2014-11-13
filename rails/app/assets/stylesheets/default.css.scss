@@ -1,0 +1,48 @@
+.clear {
+  clear:both;
+}
+.container{
+  table{
+    width:100%;
+    thead td{
+      text-align: center;
+    }
+    td{
+      padding:2px 4px;
+    }
+    .right{
+      text-align: right;
+    }
+    .center{
+      text-align: center;
+    }
+
+  }
+}
+form {
+  .input{
+    float:left;
+    clear:both;
+    margin-bottom: 10px;
+  }
+  label{
+    float:left;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=password]{
+    float:left;
+    clear:left;
+    width:400px;
+    padding: 5px 8px;
+    border-radius: 10px;
+  }
+}
+
+.avatar-frame, .avatar-frame img{
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -moz-border-radius: 30px
+}

@@ -1,0 +1,133 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+/api/v1/leaderboard/points?provider={:provider}
+{
+  activities: [
+    {
+      user: {
+        id: 1234,
+        name: 'Joey Parsley',
+        avatar: 'http://placehold.it/50x50,
+      },
+      points: 1000,
+      calories: 1000,
+      distance: 1000,
+      steps: 100,
+    },
+    {
+      user: {
+        id: 1234,
+        name: 'Tikky Shiwala',
+        avatar: 'http://placehold.it/50x50,
+      },
+      points: 1000,
+      calories: 1000,
+      distance: 1000,
+      steps: 100,
+    },
+    {
+      user: {
+        id: 1234,
+        name: "Ryan L'Italien",
+        avatar: 'http://placehold.it/50x50,
+      },
+      points: 1000,
+      calories: 1000,
+      distance: 1000,
+      steps: 100,
+    }
+  ]
+}
+
+/api/v1/leaderboard/workouts?type={:type}
+{
+activities:
+  [{
+    "type" : "other",
+    "items" : [{
+      "calories" : 6.0,
+      "distance" : 0.0,
+      "duration" : 1290.0,
+      "points" : 21,
+      "steps" : 0,
+      "user" : {
+        "avatar" : "http://placehold.it/50x50",
+        "first_name" : "Tikky",
+        "id" : 1,
+        "last_name" : "Shiwala"
+      }
+    }]
+  },
+  {
+    "type" : "walking",
+    "items" : [{
+      "calories" : 9194.0,
+      "distance" : 52.011706096954299,
+      "duration" : 313680.0,
+      "points" : 32142,
+      "steps" : 66055,
+      "user" : { "avatar" : "http://placehold.it/50x50",
+        "first_name" : "Tikky",
+        "id" : 1,
+        "last_name" : "Shiwala"
+      }
+    }],
+  },
+  {
+    "type" : "running",
+    "items" : [{
+      "calories" : 1693.0,
+      "distance" : 602.71775518512902,
+      "duration" : 5677.9840000000004,
+      "points" : 5233,
+      "steps" : 0,
+      "user" : { "avatar" : "http://placehold.it/50x50",
+        "first_name" : "Tikky",
+        "id" : 1,
+        "last_name" : "Shiwala"
+      }
+    },
+    {
+      "calories" : 0.0,
+      "distance" : 37504.300000000003,
+      "duration" : 110288.0,
+      "points" : 0,
+      "steps" : 0,
+      "user" : {
+        "avatar" : "http://placehold.it/50x50",
+        "first_name" : "Your",
+        "id" : 2,
+        "last_name" : "mama"
+      }
+    }],
+  }]
+}
+TODO: V2 endpoints
+/api/v1/users/:user_id

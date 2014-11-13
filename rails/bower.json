@@ -1,0 +1,17 @@
+{
+  "name": "Constantly Fit",
+  "version": "1.0.0",
+  "main": "app/assets/stylesheet/application.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    ".*",
+    "LICENSE",
+    "*.md"
+  ],
+  "dependencies": {
+    "ember": "*",
+    "ember-data": "*",
+    "bootstrap": "*"
+  }
+}

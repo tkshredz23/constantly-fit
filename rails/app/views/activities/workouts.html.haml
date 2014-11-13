@@ -1,0 +1,31 @@
+%h1.clear Workout Leaderboard
+
+- @response.each do |group|
+  %h3=group['type']
+  %table.table.table-striped
+    %thead
+      %tr
+        %th.center User
+        %th.center Duration
+        %th.center Distance
+        %th.center Count
+    %tbody
+      - group['items'].each do |item|
+        %tr
+          %td
+            %a
+              %span.avatar-frame
+                %img{src: item['user']['avatar']}
+              %span.first_name
+                = item['user']['first_name']
+              %span.last_name
+                = item['user']['last_name']
+          %td.center
+            %span.duration.right
+              = item['duration']
+          %td.center
+            %span.distance.right
+              = item['distance']
+          %td.center
+            %span.count.right
+              = item['count']

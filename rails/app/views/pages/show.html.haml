@@ -1,0 +1,511 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title Small Town Gym
+    / Bootstrap Core CSS
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    / Custom CSS
+    %link{:href => "css/agency.css", :rel => "stylesheet"}/
+    / Custom Fonts
+    %link{:href => "font-awesome-4.1.0/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700", :rel => "stylesheet", :type => "text/css"}/
+    / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    / WARNING: Respond.js doesn't work if you view the page via file://
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body#page-top.index
+    / Navigation
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          / <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+        / Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li.hidden
+              %a{:href => "#page-top"}
+            %li
+              %a.page-scroll{:href => "#services"} Services
+            /
+              <li>
+              <a class="page-scroll" href="#portfolio">Portfolio</a>
+              </li>
+            %li
+              %a.page-scroll{:href => "#about"} About
+            %li
+              %a.page-scroll{:href => "#team"} Leaderboard
+            %li
+              %a.page-scroll{:href => "#contact"} Contact
+        / /.navbar-collapse
+      / /.container-fluid
+    / Header
+    %header
+      .container
+        .intro-text
+          .intro-lead-in Contact's Gym
+          .intro-heading Here To Pump You Up
+          %a.page-scroll.btn.btn-xl{:href => "#services"} Tell Me More
+    / Services Section
+    %section#services.bg-light-gray
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Services
+            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row.text-center
+          .col-md-4
+            %span.fa-stack.fa-4x
+              %i.fa.fa-circle.fa-stack-2x.text-primary
+              %i.fa.fa-bicycle.fa-stack-1x.fa-inverse
+            %h4.service-heading Cycle
+            %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+          .col-md-4
+            %span.fa-stack.fa-4x
+              %i.fa.fa-circle.fa-stack-2x.text-primary
+              %i.fa.fa-road.fa-stack-1x.fa-inverse
+            %h4.service-heading Road Running
+            %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+          .col-md-4
+            %span.fa-stack.fa-4x
+              %i.fa.fa-circle.fa-stack-2x.text-primary
+              %i.fa.fa-futbol-o.fa-stack-1x.fa-inverse
+            %h4.service-heading Team Sports
+            %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+    / Portfolio Grid Section
+    /
+      <section id="portfolio" class="bg-light-gray">
+      <div class="container">
+      <div class="row">
+      <div class="col-lg-12 text-center">
+      <h2 class="section-heading">Portfolio</h2>
+      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-4 col-sm-6 portfolio-item">
+      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+      <div class="portfolio-hover">
+      <div class="portfolio-hover-content">
+      <i class="fa fa-plus fa-3x"></i>
+      </div>
+      </div>
+      <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+      </a>
+      <div class="portfolio-caption">
+      <h4>Round Icons</h4>
+      <p class="text-muted">Graphic Design</p>
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+      <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+      <div class="portfolio-hover">
+      <div class="portfolio-hover-content">
+      <i class="fa fa-plus fa-3x"></i>
+      </div>
+      </div>
+      <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+      </a>
+      <div class="portfolio-caption">
+      <h4>Startup Framework</h4>
+      <p class="text-muted">Website Design</p>
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+      <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+      <div class="portfolio-hover">
+      <div class="portfolio-hover-content">
+      <i class="fa fa-plus fa-3x"></i>
+      </div>
+      </div>
+      <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+      </a>
+      <div class="portfolio-caption">
+      <h4>Treehouse</h4>
+      <p class="text-muted">Website Design</p>
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+      <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+      <div class="portfolio-hover">
+      <div class="portfolio-hover-content">
+      <i class="fa fa-plus fa-3x"></i>
+      </div>
+      </div>
+      <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+      </a>
+      <div class="portfolio-caption">
+      <h4>Golden</h4>
+      <p class="text-muted">Website Design</p>
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+      <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+      <div class="portfolio-hover">
+      <div class="portfolio-hover-content">
+      <i class="fa fa-plus fa-3x"></i>
+      </div>
+      </div>
+      <img src="img/portfolio/escape.png" class="img-responsive" alt="">
+      </a>
+      <div class="portfolio-caption">
+      <h4>Escape</h4>
+      <p class="text-muted">Website Design</p>
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+      <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+      <div class="portfolio-hover">
+      <div class="portfolio-hover-content">
+      <i class="fa fa-plus fa-3x"></i>
+      </div>
+      </div>
+      <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
+      </a>
+      <div class="portfolio-caption">
+      <h4>Dreams</h4>
+      <p class="text-muted">Website Design</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+    / About Section
+    %section#about
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading About
+            %p Bacon ipsum dolor amet sausage jerky pancetta, chuck meatball beef ribs sirloin spare ribs pork chop. Cow sirloin porchetta, bresaola strip steak andouille pork belly turducken ribeye biltong filet mignon tenderloin swine leberkas. T-bone ribeye pork belly kielbasa cow kevin spare ribs shank, meatball chuck tail leberkas. Hamburger ham venison, boudin brisket salami flank short loin turkey. Tail bacon turkey, biltong sausage jerky boudin bresaola doner porchetta turducken chuck. Short loin turkey biltong flank tenderloin. Salami jerky pork pork belly ham cow.
+    / Team Section
+    %section#team.bg-light-gray
+      .container
+        .row
+          .col-lg-12.text-center
+            %h1.clear Workout Leaderboard
+            - @response.each do |group|
+              %h3=group['type']
+              %table.table.table-striped
+                %thead
+                  %tr
+                    %th.center User
+                    %th.center Duration
+                    %th.center Distance
+                    %th.center Count
+                %tbody
+                  - group['items'].each do |item|
+                    %tr
+                      %td
+                        %a
+                          %span.avatar-frame
+                            %img{src: item['user']['avatar']}
+                          %span.first_name
+                            = item['user']['first_name']
+                          %span.last_name
+                            = item['user']['last_name']
+                      %td.center
+                        %span.duration.right
+                          = item['duration']
+                      %td.center
+                        %span.distance.right
+                          = item['distance']
+                      %td.center
+                        %span.count.right
+                          = item['count']
+            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row
+          .col-sm-4
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "img/team/1.jpg"}/
+              %h4 Tikky Shiwala
+              %p.text-muted 2nd Place
+              %ul.list-inline.social-buttons
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "img/team/2.jpg"}/
+              %h4 Joseph Parshley
+              %p.text-muted 1st Place
+              %ul.list-inline.social-buttons
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "img/team/3.jpg"}/
+              %h4 Julissa Jansen
+              %p.text-muted 3rd place
+              %ul.list-inline.social-buttons
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            %p.large.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+    / / Clients Aside
+    / %aside.clients
+    /   .container
+    /     .row
+    /       .col-md-3.col-sm-6
+    /         %a{:href => "#"}
+    /           %img.img-responsive.img-centered{:alt => "", :src => "img/logos/envato.jpg"}/
+    /       .col-md-3.col-sm-6
+    /         %a{:href => "#"}
+    /           %img.img-responsive.img-centered{:alt => "", :src => "img/logos/designmodo.jpg"}/
+    /       .col-md-3.col-sm-6
+    /         %a{:href => "#"}
+    /           %img.img-responsive.img-centered{:alt => "", :src => "img/logos/themeforest.jpg"}/
+    /       .col-md-3.col-sm-6
+    /         %a{:href => "#"}
+    /           %img.img-responsive.img-centered{:alt => "", :src => "img/logos/creative-market.jpg"}/
+    %section#contact
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Contact Us
+            %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row
+          .col-lg-12
+            %form#contactForm{:name => "sentMessage", :novalidate => ""}
+              .row
+                .col-md-6
+                  .form-group
+                    %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text"}/
+                    %p.help-block.text-danger
+                  .form-group
+                    %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email"}/
+                    %p.help-block.text-danger
+                  .form-group
+                    %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel"}/
+                    %p.help-block.text-danger
+                .col-md-6
+                  .form-group
+                    %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Your Message *", :required => ""}
+                    %p.help-block.text-danger
+                .clearfix
+                .col-lg-12.text-center
+                  #success
+                  %button.btn.btn-xl{:type => "submit"} Send Message
+    %footer
+      .container
+        .row
+          .col-md-4
+            %span.copyright Copyright © Your Website 2014
+          .col-md-4
+            %ul.list-inline.social-buttons
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-linkedin
+          .col-md-4
+            %ul.list-inline.quicklinks
+              %li
+                %a{:href => "#"} Privacy Policy
+              %li
+                %a{:href => "#"} Terms of Use
+    / Portfolio Modals
+    / Use the modals below to showcase details about your portfolio projects!
+    / Portfolio Modal 1
+    #portfolioModal1.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-content
+        .close-modal{"data-dismiss" => "modal"}
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                / Project Details Go Here
+                %h2 Project Name
+                %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                %img.img-responsive{:alt => "", :src => "img/portfolio/roundicons-free.png"}/
+                %p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                %p
+                  %strong> Want these icons in this portfolio item sample?
+                  You can download 60 of them for free, courtesy of
+                  = succeed "," do
+                    %a{:href => "https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc"} RoundIcons.com
+                  = succeed "." do
+                    %a{:href => "https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc"} here
+                %ul.list-inline
+                  %li Date: July 2014
+                  %li Client: Round Icons
+                  %li Category: Graphic Design
+                %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                  %i.fa.fa-times
+                  Close Project
+    / Portfolio Modal 2
+    #portfolioModal2.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-content
+        .close-modal{"data-dismiss" => "modal"}
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                %h2 Project Heading
+                %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/startup-framework-preview.png"}/
+                %p
+                  %a{:href => "http://designmodo.com/startup/?u=787"} Startup Framework
+                  is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.
+                %p
+                  You can preview Startup Framework
+                  = succeed "." do
+                    %a{:href => "http://designmodo.com/startup/?u=787"} here
+                %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                  %i.fa.fa-times
+                  Close Project
+    / Portfolio Modal 3
+    #portfolioModal3.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-content
+        .close-modal{"data-dismiss" => "modal"}
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                / Project Details Go Here
+                %h2 Project Name
+                %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/treehouse-preview.png"}/
+                %p
+                  Treehouse is a free PSD web template built by
+                  = succeed "." do
+                    %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
+                %p
+                  You can download the PSD template in this portfolio sample item at
+                  = succeed "." do
+                    %a{:href => "http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/"} FreebiesXpress.com
+                %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                  %i.fa.fa-times
+                  Close Project
+    / Portfolio Modal 4
+    #portfolioModal4.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-content
+        .close-modal{"data-dismiss" => "modal"}
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                / Project Details Go Here
+                %h2 Project Name
+                %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/golden-preview.png"}/
+                %p
+                  Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by
+                  = succeed "." do
+                    %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
+                %p
+                  You can download the PSD template in this portfolio sample item at
+                  = succeed "." do
+                    %a{:href => "http://freebiesxpress.com/gallery/golden-free-one-page-web-template/"} FreebiesXpress.com
+                %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                  %i.fa.fa-times
+                  Close Project
+    / Portfolio Modal 5
+    #portfolioModal5.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-content
+        .close-modal{"data-dismiss" => "modal"}
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                / Project Details Go Here
+                %h2 Project Name
+                %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/escape-preview.png"}/
+                %p
+                  Escape is a free PSD web template built by
+                  = succeed "." do
+                    %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
+                %p
+                  You can download the PSD template in this portfolio sample item at
+                  = succeed "." do
+                    %a{:href => "http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/"} FreebiesXpress.com
+                %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                  %i.fa.fa-times
+                  Close Project
+    / Portfolio Modal 6
+    #portfolioModal6.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-content
+        .close-modal{"data-dismiss" => "modal"}
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                / Project Details Go Here
+                %h2 Project Name
+                %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/dreams-preview.png"}/
+                %p
+                  Dreams is a free PSD web template built by
+                  = succeed "." do
+                    %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
+                %p
+                  You can download the PSD template in this portfolio sample item at
+                  = succeed "." do
+                    %a{:href => "http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/"} FreebiesXpress.com
+                %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                  %i.fa.fa-times
+                  Close Project
+    / jQuery
+    %script{:src => "js/jquery.js"}
+    / Bootstrap Core JavaScript
+    %script{:src => "js/bootstrap.min.js"}
+    / Plugin JavaScript
+    %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
+    %script{:src => "js/classie.js"}
+    %script{:src => "js/cbpAnimatedHeader.js"}
+    / Contact Form JavaScript
+    %script{:src => "js/jqBootstrapValidation.js"}
+    %script{:src => "js/contact_me.js"}
+    / Custom Theme JavaScript
+    %script{:src => "js/agency.js"}

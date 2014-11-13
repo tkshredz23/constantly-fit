@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: constantly_fit_development
+
+test:
+  <<: *default
+  database: constantly_fit_test
+
+production:
+  <<: *default
+  database: constantly_fit_production
+  username: constantly_fit_runkeeper
+  password: <%= ENV['CONSTANTLY_FIT_DATABASE_PASSWORD'] %>

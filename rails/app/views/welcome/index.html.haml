@@ -1,0 +1,14 @@
+- if current_user
+  %ul
+    - unless current_user.has_nike?
+      %li= link_to('Login with Nike', auth_nike_path)
+    - unless current_user.has_fitbit?
+      %li= link_to('Login with Fitbit', auth_fitbit_path)
+    - unless current_user.has_strava?
+      %li= link_to('Login with Strava', auth_strava_path)
+    - unless current_user.has_runkeeper?
+      %li= link_to('Login with RunKeeper', auth_runkeeper_path)
+    - unless current_user.has_jawbone?
+      %li= link_to('Login with Jawbone', auth_jawbone_path)
+- else
+  %p Please, register
