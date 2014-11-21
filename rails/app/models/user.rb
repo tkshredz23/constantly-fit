@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :accounts
   has_many :activities, through: :accounts
 
+  before_save :ensure_authentication_token
   after_create :build_profile
 
   def build_profile
@@ -18,6 +19,22 @@ class User < ActiveRecord::Base
     self.send(:define_method, "has_#{provider}?") do
       provider_class = "#{provider.capitalize}::Account"
       accounts.map(&:type).include?(provider_class)
+    end
+  end
+
+
+  def ensure_authentication_token
+    if authentication_token.blank?
+      self.authentication_token = generate_authentication_token
+    end
+  end
+
+  private
+
+  def generate_authentication_token
+    loop do
+      token = Devise.friendly_token
+      break token unless User.where(authentication_token: token).first
     end
   end
 end
