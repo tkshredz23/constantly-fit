@@ -14,6 +14,8 @@ var WorkoutsRoute = Ember.Route.extend({
   },
   model: function(params) {
     console.log(params);
+    console.log(this.store);
+    //var workouts = this.store.findAll('workout');
     var workouts = this.store.findQuery('workout', params);
 
     return workouts;

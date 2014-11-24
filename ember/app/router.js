@@ -10,7 +10,6 @@ Router.map(function() {
    this.route('users', { path: "/leaderboard" });
    this.resource('user', { path: '/users/:id' });
    this.route('workouts');
-   this.route('login');
 });
 
 Router.reopen({

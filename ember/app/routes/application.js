@@ -1,6 +1,5 @@
 import Ember from "ember";
-import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
-var ApplicationRoute = Ember.Route.extend(ApplicationRouteMixin);
+var ApplicationRoute = Ember.Route.extend();
 
 export default ApplicationRoute;

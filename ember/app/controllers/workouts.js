@@ -5,15 +5,14 @@ var WorkoutsController = Ember.ArrayController.extend({
   type: null,
   order: null,
   provider: null,
-  toggle: function(){
-      
-  },
 
   filteredWorkouts: function(){
     var type = this.get('type');
     var order = this.get('order');
     var provider = this.get('provider');
     var workouts = this.get('model');
+
+    console.log(workouts);
 
     if (type) {
       return workouts.filterBy('type', type);
