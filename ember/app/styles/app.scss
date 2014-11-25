@@ -164,3 +164,23 @@ p.copyright {
 html, body {
   margin: 20px;
 }
+
+// .avatar-frame {
+//   width: 100px;
+//   img{
+//     width: 100px;
+//     height: 100px;
+//     -webkit-border-radius: 50px;
+//     border-radius: 50px;
+//     -moz-border-radius: 50px
+//   }
+// }
+.avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}

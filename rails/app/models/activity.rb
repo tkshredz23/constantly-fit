@@ -70,6 +70,7 @@ class Activity < ActiveRecord::Base
     joins(account: :user)
     .group('activities.kind, accounts.user_id')
     .select("accounts.user_id, activities.kind, #{METRICS_SUM}")
+    .where("activities.kind <> 'other'") #Only want to show tagged sessions
   end
 
   def self.aggregated_activities_by_provider
@@ -103,7 +104,7 @@ class Activity < ActiveRecord::Base
     query = if TIME_FRAMES.include?(period) && respond_to?(period)
               query.send(period)
             else
-              query.week
+              query.month
             end
   end
 end

@@ -32,7 +32,9 @@
             <tr>
               <td>
                 <img {{bind-attr src=activity.user.avatar alt=activity.user.first_name}} height='50' width='50' />
+                {{#link-to 'user' activity.user.user_id}}
                 {{activity.user.first_name}} {{activity.user.last_name}}
+                {{/link-to}}
               </td>
               <td>
                 {{activity.duration}}

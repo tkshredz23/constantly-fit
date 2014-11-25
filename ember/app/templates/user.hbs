@@ -1,12 +1,41 @@
 <div class="top-padding">
   <div class="container" id="main">
     <div class="row">
-      <div class="col-md-12">
-
-        <h1>{{firstName}} {{lastName}}</h1>
-
-        <img {{bind-attr src=avatar alt=firstName}} height='100' width='100' />
-
+      <div class="col-md-2">
+        <figure class='avatar-frame'>
+          <img class='avatar' {{bind-attr src=avatar alt=first_name}} />
+        </figure>
+        <header>
+          <h1>{{name}}</h1>
+          <p>Joined on {{created_at}}</p>
+        </header>
+      </div>
+      <div class="col-md-10">
+        <ul>
+          {{#each workout in workouts}}
+          <li>
+            <section>
+              <h2>{{workout.type}}</h2>
+              <p>Total miles this month: {{workout.activity.distance}} miles</p>
+              <p>Total runs: {{workout.activity.count}}</p>
+              <p>Total duration: {{workout.activity.duration}}</p>
+            </section>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        {{#each point in points}}
+          <li>
+            <section>
+              <h2>{{point.provider}}</h2>
+              <p>Points: {{point.activity.points}}</p>
+              yada: {{point.yada}}
+            </section>
+          </li>
+        {{/each}}
       </div>
     </div>
   </div>

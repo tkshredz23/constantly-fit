@@ -20,7 +20,7 @@
             <tr>
               <td><img {{bind-attr src=avatar alt=first_name}} height='24' width='24' /></td>
               <td>
-                {{#link-to 'user' this}}
+                {{#link-to 'user' user_id}}
                 {{first_name}} {{last_name}}
                 {{/link-to}}
               </td>

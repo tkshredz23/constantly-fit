@@ -2,17 +2,19 @@ class Api::ActivitiesController < ApplicationController
   respond_to :json
 
   def workouts
-    opts = activity_params.merge(method: 'type')
+    user = User.find(params[:id])
+    respond_with({ workouts: user.activities })
+    # opts = activity_params.merge(method: 'type')
 
-    activities = ActivityDecorator.new(Activity.all, opts)
-    respond_with({ workouts: activities })
+    # activities = ActivityDecorator.new(Activity.all, opts)
+    # respond_with({ workouts: activities })
   end
 
   def points
-    opts = activity_params.merge(method: 'provider')
+    # opts = activity_params.merge(method: 'provider')
 
-    activities = ActivityDecorator.new(Activity.all, opts)
-    respond_with({ points: activities })
+    # activities = ActivityDecorator.new(Activity.all, opts)
+    # respond_with({ points: activities })
   end
 
   private

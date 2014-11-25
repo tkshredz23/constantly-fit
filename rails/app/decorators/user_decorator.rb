@@ -42,10 +42,12 @@ class UserDecorator < Draper::Decorator
   def as_json(*)
     hash = {
       id: SecureRandom.uuid,
+      user_id: id,
       email: email,
       avatar: avatar_url,
       first_name: first_name,
       last_name: last_name,
+      created_at: created_at.strftime('%b %d, %Y')
     }
 
     if @show_details

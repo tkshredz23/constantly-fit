@@ -23,7 +23,12 @@ Rails.application.routes.draw do
       get 'workouts', to: 'activities#workouts'
       get 'points', to: 'activities#points'
 
-      resources :users
+      resources :users do
+        member do
+          get 'workouts', to: 'activities#workouts'
+          get 'points', to: 'activities#points'
+        end
+      end
     end
   end
 end
