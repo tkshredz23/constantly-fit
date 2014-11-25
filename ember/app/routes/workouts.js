@@ -13,12 +13,17 @@ var WorkoutsRoute = Ember.Route.extend({
     }
   },
   model: function(params) {
-    console.log(params);
-    console.log(this.store);
     //var workouts = this.store.findAll('workout');
     var workouts = this.store.findQuery('workout', params);
 
     return workouts;
+  },
+  actions: {
+    error: function(reason, transition){
+      console.log('ERROR Handling code');
+      console.log("reason:" + reason);
+      console.log("transition:" + transition);
+    }
   }
 });
 

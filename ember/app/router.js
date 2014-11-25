@@ -7,9 +7,11 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
    this.route('about');
-   this.route('users', { path: "/leaderboard" });
+   //this.route('users', { path: "/leaderboard" });
+   this.route('users');
    this.resource('user', { path: '/users/:id' });
    this.route('workouts');
+   this.route('points');
 });
 
 Router.reopen({

@@ -12,8 +12,6 @@ var WorkoutsController = Ember.ArrayController.extend({
     var provider = this.get('provider');
     var workouts = this.get('model');
 
-    console.log(workouts);
-
     if (type) {
       return workouts.filterBy('type', type);
     } else if (provider){
